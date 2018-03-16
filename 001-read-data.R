@@ -31,8 +31,8 @@ wnv <- function(Temp){(-0.132+0.0092*Temp)/24}
 # set working directory
 setwd("G:/NeuAll/002-research-projects/002-research-projects-008-resting-sites")
 
-# Read file with coordinates
-coordinates <- read.table (file = "Data/coordinates.csv",row.names=1,header=TRUE,sep=";",fill=T) # read xy-values
+# read file including coordinates of the sampling sites
+coordinates <- read.table (file = "data/coordinates.csv",row.names=1,header=TRUE,sep=";",fill=T) # read xy-values
 
-# Extract coordinates
-GPS<-matrix(nrow = nrow(coordinates), ncol = 2)
+# extract coordinate information
+gps_info <- matrix(nrow = nrow(coordinates), ncol = 2)
