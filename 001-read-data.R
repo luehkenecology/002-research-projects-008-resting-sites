@@ -27,3 +27,12 @@ malaria <- function(Temp){(0.000126*Temp+(Temp-14.244)*sqrt(34.4-Temp))/24}
 
 # west nile virus
 wnv <- function(Temp){(-0.132+0.0092*Temp)/24}
+
+# set working directory
+setwd("G:/NeuAll/002-research-projects/002-research-projects-008-resting-sites")
+
+# Read file with coordinates
+coordinates <- read.table (file = "Data/coordinates.csv",row.names=1,header=TRUE,sep=";",fill=T) # read xy-values
+
+# Extract coordinates
+GPS<-matrix(nrow = nrow(coordinates), ncol = 2)
